@@ -2,9 +2,13 @@
   "name": "reto-backend-serveless",
   "version": "1.0.0",
   "description": "Reto Backend",
-  "main": "handler.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sls offline start",
+    "inspect": "node --inspect ./node_modules/.bin/sls offline start",
+    "artifacts": "sls package --package artifacts"
+  
   },
   "keywords": [],
   "author": "Popi",

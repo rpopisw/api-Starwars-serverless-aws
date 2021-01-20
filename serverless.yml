@@ -46,3 +46,21 @@ package:
     - jsdoc.conf.json
     - README.md
 
+functions:
+  films:
+    description: Film resource list and creation.
+    handler: functions/films.handler
+    events:
+      - http:
+          path: api/films
+          method: get 
+          cors: true
+          request:
+            parameters:
+              querystrings:
+                lang: true
+resources:
+  Resources:
+    ApiGatewayRestApi:
+      Type: 'AWS::ApiGateway::RestApi'
+      Properties:

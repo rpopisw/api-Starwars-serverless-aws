@@ -1,6 +1,5 @@
 import {
-  FilmRepository,
-  PeopleRepository
+  FilmRepository
 } from 'swapi-repositories'
 
 class UnitOfWork {
@@ -8,7 +7,6 @@ class UnitOfWork {
     this.dbContext = dbContext
 
     this.FilmRepository = new FilmRepository(dbContext)
-    this.PeopleRepository = new PeopleRepository(dbContext)
   }
 
 }
