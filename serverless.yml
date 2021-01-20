@@ -1,0 +1,48 @@
+service: reto-backend-serveless
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs8.10
+  environment: '${file(.env.yml):${self:custom.stage}}'
+  stage: development
+
+custom:
+  webpack:
+    webpackConfig: './webpack.config.${self:custom.stage}.js'
+    includeModules:
+      forceInclude:
+        - sequelize
+        - tedious
+  stage: ${opt:stage, self:provider.stage}
+  serverless-offline:
+    httpPort: 3000
+    babelOptions:
+      presets:
+        - env
+
+package:
+  exclude:
+    - .vscode/**
+    - docs/**
+    - templates/**
+    - tests/**
+    - .editorconfig
+    - .env.yml.example
+    - .eslintrc.js
+    - .eslintrc
+    - .jsbeautifyrc
+    - .editorconfig
+    - .git/**
+    - .gitattributes
+    - .gitignore
+    - artifacts
+    - .npmrc
+    - jsdoc.conf
+    - jsdoc.conf.json
+    - README.md
+

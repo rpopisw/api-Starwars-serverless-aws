@@ -1,0 +1,41 @@
+{
+  "name": "reto-backend-serveless",
+  "version": "1.0.0",
+  "description": "Reto Backend",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Popi",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "7.0.0",
+    "babel-loader": "7.1.2",
+    "babel-node-modules": "^0.0.1",
+    "babel-plugin-transform-builtin-extend": "1.1.2",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "6.26.0",
+    "copy-webpack-plugin": "4.3.1",
+    "sequelize-cli": "^5.5.1",
+    "serverless": "^1.68.0",
+    "serverless-offline": "^6.1.4",
+    "serverless-webpack": "5.2.0",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "babel-runtime": "6.26.0",
+    "i18n": "^0.9.0",
+    "ip": "^1.1.5",
+    "lodash": "^4.17.15",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "sequelize": "^5.21.7",
+    "yenv": "^2.1.1"
+  }
+}
