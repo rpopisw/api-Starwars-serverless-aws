@@ -4,11 +4,10 @@
   "description": "Reto Backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --exit --timeout 10000",
     "start": "sls offline start",
     "inspect": "node --inspect ./node_modules/.bin/sls offline start",
     "artifacts": "sls package --package artifacts"
-  
   },
   "keywords": [],
   "author": "Popi",
@@ -24,11 +23,17 @@
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "6.26.0",
+    "chai": "^4.2.0",
     "copy-webpack-plugin": "4.3.1",
+    "jsdoc": "^3.6.6",
+    "mocha": "^8.2.1",
+    "proxyquire": "^2.1.3",
     "sequelize-cli": "^5.5.1",
     "serverless": "^1.68.0",
     "serverless-offline": "^6.1.4",
     "serverless-webpack": "5.2.0",
+    "sinon": "^9.2.3",
+    "supertest": "^6.1.1",
     "webpack": "^3.10.0",
     "webpack-node-externals": "^1.6.0"
   },

@@ -59,6 +59,77 @@ functions:
             parameters:
               querystrings:
                 lang: true
+      - http: 
+          path: api/films
+          method: post 
+          cors: true
+      - http:
+          path: api/films/{id}
+          method: get 
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+      - http:
+          path: api/films/{id}
+          method: patch
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+      - http:
+          path: api/films/{id}
+          method: delete
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+
+  people:
+    description: A People resource is an individual person or character within the Star Wars universe.
+    handler: functions/people.handler
+    events:
+      - http:
+          path: api/people
+          method: get 
+          cors: true
+          request:
+            parameters:
+              querystrings:
+                lang: true
+      - http: 
+          path: api/people
+          method: post 
+          cors: true
+      - http:
+          path: api/people/{id}
+          method: get 
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+      - http:
+          path: api/people/{id}
+          method: patch
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+      - http:
+          path: api/people/{id}
+          method: delete
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+  
+
 resources:
   Resources:
     ApiGatewayRestApi:

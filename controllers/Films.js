@@ -70,6 +70,13 @@ class FilmsController extends BaseController {
       films
     )
 
+    results = map(results, e => {
+        const filmDTO = new FilmDTO(e)
+        const filmMapping = new FilmMapping(filmDTO)
+       return filmMapping.toSpanish()
+       
+    });
+
     if (lang) {
       results = map(results, e => {
         const filmDTO = new FilmDTO(e)
