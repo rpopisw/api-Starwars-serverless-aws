@@ -6,10 +6,13 @@ plugins:
 
 provider:
   name: aws
+  profile: aws-deploy
   region: us-east-1
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   environment: '${file(.env.yml):${self:custom.stage}}'
   stage: development
+  
+  
 
 custom:
   webpack:
@@ -29,19 +32,13 @@ package:
   exclude:
     - .vscode/**
     - docs/**
-    - templates/**
-    - tests/**
+    - test/**
     - .editorconfig
     - .env.yml.example
-    - .eslintrc.js
-    - .eslintrc
     - .jsbeautifyrc
-    - .editorconfig
     - .git/**
-    - .gitattributes
     - .gitignore
     - artifacts
-    - .npmrc
     - jsdoc.conf
     - jsdoc.conf.json
     - README.md
@@ -128,10 +125,4 @@ functions:
             parameters:
               paths:
                 id: true
-  
-
-resources:
-  Resources:
-    ApiGatewayRestApi:
-      Type: 'AWS::ApiGateway::RestApi'
-      Properties:
+         
