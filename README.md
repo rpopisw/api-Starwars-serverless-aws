@@ -76,7 +76,7 @@ npm start
 Se realizo pruebas para validar el estado de los endpoints,para ejecutar las pruebas debemos ejecutar :
 
 ```
-npm start
+npm test
 ```
 
 ### Analice las pruebas /api/films 🔩
