@@ -1,6 +1,6 @@
-# Reto Backend Serverless Node.js - Mysql
+# Serverless Node.js - Mysql
 
-## Descripción del reto técnico:
+## Descripción:
 
 * Crear una API en Node.js con el framework Serverless para un despliegue en AWS.
 * Adaptar y transformar los modelos de la API de prueba. Se tienen que mapear todos los nombres de atributos modelos del inglés al español (Ej: name -> nombre).
